@@ -368,6 +368,134 @@ public final class LogInMutation: GraphQLMutation {
   }
 }
 
+public final class PostMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation Post($url: String!, $description: String!) {
+      post(url: $url, description: $description) {
+        __typename
+        id
+        description
+        url
+        votes
+      }
+    }
+    """
+
+  public let operationName: String = "Post"
+
+  public var url: String
+  public var description: String
+
+  public init(url: String, description: String) {
+    self.url = url
+    self.description = description
+  }
+
+  public var variables: GraphQLMap? {
+    return ["url": url, "description": description]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("post", arguments: ["url": GraphQLVariable("url"), "description": GraphQLVariable("description")], type: .nonNull(.object(Post.selections))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(post: Post) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "post": post.resultMap])
+    }
+
+    public var post: Post {
+      get {
+        return Post(unsafeResultMap: resultMap["post"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "post")
+      }
+    }
+
+    public struct Post: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["Link"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+          GraphQLField("description", type: .nonNull(.scalar(String.self))),
+          GraphQLField("url", type: .nonNull(.scalar(String.self))),
+          GraphQLField("votes", type: .nonNull(.scalar(Int.self))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: GraphQLID, description: String, url: String, votes: Int) {
+        self.init(unsafeResultMap: ["__typename": "Link", "id": id, "description": description, "url": url, "votes": votes])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var description: String {
+        get {
+          return resultMap["description"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "description")
+        }
+      }
+
+      public var url: String {
+        get {
+          return resultMap["url"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "url")
+        }
+      }
+
+      public var votes: Int {
+        get {
+          return resultMap["votes"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "votes")
+        }
+      }
+    }
+  }
+}
+
 public final class SignUpMutation: GraphQLMutation {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
@@ -534,6 +662,110 @@ public final class SignUpMutation: GraphQLMutation {
           set {
             resultMap.updateValue(newValue, forKey: "email")
           }
+        }
+      }
+    }
+  }
+}
+
+public final class UpVoteMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation UpVote($id: ID!) {
+      upvote(id: $id) {
+        __typename
+        id
+        votes
+      }
+    }
+    """
+
+  public let operationName: String = "UpVote"
+
+  public var id: GraphQLID
+
+  public init(id: GraphQLID) {
+    self.id = id
+  }
+
+  public var variables: GraphQLMap? {
+    return ["id": id]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("upvote", arguments: ["id": GraphQLVariable("id")], type: .nonNull(.object(Upvote.selections))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(upvote: Upvote) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "upvote": upvote.resultMap])
+    }
+
+    public var upvote: Upvote {
+      get {
+        return Upvote(unsafeResultMap: resultMap["upvote"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "upvote")
+      }
+    }
+
+    public struct Upvote: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["Link"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+          GraphQLField("votes", type: .nonNull(.scalar(Int.self))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: GraphQLID, votes: Int) {
+        self.init(unsafeResultMap: ["__typename": "Link", "id": id, "votes": votes])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var votes: Int {
+        get {
+          return resultMap["votes"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "votes")
         }
       }
     }

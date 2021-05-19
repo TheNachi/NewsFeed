@@ -10,14 +10,27 @@
 		36777789E71E82F45FC77741 /* Pods_NewsFeed_NewsFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1D8F25C558C6F6A81EF443 /* Pods_NewsFeed_NewsFeedUITests.framework */; };
 		5407CF28D2C8FD5CC3DB4274 /* Pods_NewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D337B01593C8166D3B5444 /* Pods_NewsFeed.framework */; };
 		553980DBC64FFBD919A688FA /* Pods_NewsFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B4B154C8D53FBE979FF8C5 /* Pods_NewsFeedTests.framework */; };
+		B60883F626555686006E17C6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60883F526555686006E17C6 /* PostViewController.swift */; };
+		B655B18F265514AD00A59389 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B655B18E265514AD00A59389 /* AccountManager.swift */; };
+		B655B1942655179E00A59389 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B655B1932655179E00A59389 /* BaseViewController.swift */; };
 		B659134226531CCB0053046C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659134126531CCB0053046C /* AppDelegate.swift */; };
 		B659134426531CCB0053046C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659134326531CCB0053046C /* SceneDelegate.swift */; };
 		B659134626531CCB0053046C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659134526531CCB0053046C /* SignUpViewController.swift */; };
 		B659134926531CCB0053046C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B659134726531CCB0053046C /* Main.storyboard */; };
 		B659134B26531CCC0053046C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B659134A26531CCC0053046C /* Assets.xcassets */; };
 		B659134E26531CCC0053046C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B659134C26531CCC0053046C /* LaunchScreen.storyboard */; };
-		B659135926531CCC0053046C /* NewsFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659135826531CCC0053046C /* NewsFeedTests.swift */; };
 		B659136426531CCC0053046C /* NewsFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659136326531CCC0053046C /* NewsFeedUITests.swift */; };
+		B67D84602655A81200DB7C37 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D845F2655A81200DB7C37 /* Date+Extensions.swift */; };
+		B67D84652655A8FF00DB7C37 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D84642655A8FF00DB7C37 /* String+Extension.swift */; };
+		B6BE87D726556E47007876C9 /* Post.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B6BE87D626556E47007876C9 /* Post.graphql */; };
+		B6BE87E426556F9B007876C9 /* UpVote.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B6BE87E326556F9B007876C9 /* UpVote.graphql */; };
+		B6BE87E9265572E3007876C9 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87E8265572E3007876C9 /* PostViewModel.swift */; };
+		B6BE87EE26557386007876C9 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87ED26557386007876C9 /* PostService.swift */; };
+		B6BE87F326558D95007876C9 /* UpVoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87F226558D95007876C9 /* UpVoteService.swift */; };
+		B6BE87F826559216007876C9 /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87F726559216007876C9 /* FeedViewModelTests.swift */; };
+		B6BE87FD26559606007876C9 /* SignUpViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87FC26559606007876C9 /* SignUpViewModelTests.swift */; };
+		B6BE880226559749007876C9 /* LogInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE880126559749007876C9 /* LogInViewModelTests.swift */; };
+		B6BE880A265597E9007876C9 /* PostViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE8809265597E9007876C9 /* PostViewModelTests.swift */; };
 		B6E8D98A265426FA00796480 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D981265426FA00796480 /* Inter-Medium.ttf */; };
 		B6E8D98B265426FA00796480 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D982265426FA00796480 /* Inter-ExtraBold.ttf */; };
 		B6E8D98C265426FA00796480 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D983265426FA00796480 /* Inter-Regular.ttf */; };
@@ -89,6 +102,9 @@
 		8E1D8F25C558C6F6A81EF443 /* Pods_NewsFeed_NewsFeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsFeed_NewsFeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC8EB6673494F1B34E242D6 /* Pods-NewsFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeedTests.release.xcconfig"; path = "Target Support Files/Pods-NewsFeedTests/Pods-NewsFeedTests.release.xcconfig"; sourceTree = "<group>"; };
 		B3376CEA1D5B2D9AC67A64EF /* Pods-NewsFeed-NewsFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeed-NewsFeedUITests.debug.xcconfig"; path = "Target Support Files/Pods-NewsFeed-NewsFeedUITests/Pods-NewsFeed-NewsFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B60883F526555686006E17C6 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		B655B18E265514AD00A59389 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		B655B1932655179E00A59389 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B659133E26531CCB0053046C /* NewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B659134126531CCB0053046C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B659134326531CCB0053046C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,11 +114,21 @@
 		B659134D26531CCC0053046C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B659134F26531CCC0053046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B659135426531CCC0053046C /* NewsFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B659135826531CCC0053046C /* NewsFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTests.swift; sourceTree = "<group>"; };
 		B659135A26531CCC0053046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B659135F26531CCC0053046C /* NewsFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B659136326531CCC0053046C /* NewsFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedUITests.swift; sourceTree = "<group>"; };
 		B659136526531CCC0053046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67D845F2655A81200DB7C37 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		B67D84642655A8FF00DB7C37 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B6BE87D626556E47007876C9 /* Post.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Post.graphql; sourceTree = "<group>"; };
+		B6BE87E326556F9B007876C9 /* UpVote.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpVote.graphql; sourceTree = "<group>"; };
+		B6BE87E8265572E3007876C9 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		B6BE87ED26557386007876C9 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		B6BE87F226558D95007876C9 /* UpVoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpVoteService.swift; sourceTree = "<group>"; };
+		B6BE87F726559216007876C9 /* FeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelTests.swift; sourceTree = "<group>"; };
+		B6BE87FC26559606007876C9 /* SignUpViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelTests.swift; sourceTree = "<group>"; };
+		B6BE880126559749007876C9 /* LogInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModelTests.swift; sourceTree = "<group>"; };
+		B6BE8809265597E9007876C9 /* PostViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTests.swift; sourceTree = "<group>"; };
 		B6E8D981265426FA00796480 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		B6E8D982265426FA00796480 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B6E8D983265426FA00796480 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
@@ -203,6 +229,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B655B1982655188400A59389 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B655B1932655179E00A59389 /* BaseViewController.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
 		B659133526531CCA0053046C = {
 			isa = PBXGroup;
 			children = (
@@ -228,10 +262,10 @@
 		B659134026531CCB0053046C /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				B655B1982655188400A59389 /* BaseClasses */,
 				B6E8DA2926548B4800796480 /* Utilities */,
 				B6E8D9802654263300796480 /* Fonts */,
 				B6E8D979265425D500796480 /* ViewModels */,
-				B6E8D978265425CD00796480 /* Constants */,
 				B6E8D977265425C500796480 /* Extensions */,
 				B6E8D976265425BE00796480 /* Models */,
 				B6E8D975265425B500796480 /* Services */,
@@ -243,6 +277,8 @@
 				B6E8D9E026545C0100796480 /* schema.json */,
 				B6E8DA192654851300796480 /* SignUp.graphql */,
 				B6E8DA372654946600796480 /* LogIn.graphql */,
+				B6BE87D626556E47007876C9 /* Post.graphql */,
+				B6BE87E326556F9B007876C9 /* UpVote.graphql */,
 			);
 			path = NewsFeed;
 			sourceTree = "<group>";
@@ -250,8 +286,11 @@
 		B659135726531CCC0053046C /* NewsFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				B659135826531CCC0053046C /* NewsFeedTests.swift */,
 				B659135A26531CCC0053046C /* Info.plist */,
+				B6BE87F726559216007876C9 /* FeedViewModelTests.swift */,
+				B6BE87FC26559606007876C9 /* SignUpViewModelTests.swift */,
+				B6BE880126559749007876C9 /* LogInViewModelTests.swift */,
+				B6BE8809265597E9007876C9 /* PostViewModelTests.swift */,
 			);
 			path = NewsFeedTests;
 			sourceTree = "<group>";
@@ -263,6 +302,17 @@
 				B659136526531CCC0053046C /* Info.plist */,
 			);
 			path = NewsFeedUITests;
+			sourceTree = "<group>";
+		};
+		B6BE880E2655994A007876C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B659134526531CCB0053046C /* SignUpViewController.swift */,
+				B6E8D9C526543ADD00796480 /* LogInViewController.swift */,
+				B6E8D9CA26543B8000796480 /* FeedViewController.swift */,
+				B60883F526555686006E17C6 /* PostViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B6E8D9722654259D00796480 /* App */ = {
@@ -278,10 +328,8 @@
 			isa = PBXGroup;
 			children = (
 				B6E8DA0B2654753000796480 /* Cells */,
-				B659134526531CCB0053046C /* SignUpViewController.swift */,
+				B6BE880E2655994A007876C9 /* Controllers */,
 				B659134726531CCB0053046C /* Main.storyboard */,
-				B6E8D9C526543ADD00796480 /* LogInViewController.swift */,
-				B6E8D9CA26543B8000796480 /* FeedViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +351,8 @@
 				B6E8D9F92654685200796480 /* FeedService.swift */,
 				B6E8DA1E265485EF00796480 /* SignUpService.swift */,
 				B6E8DA3C265494BD00796480 /* LogInService.swift */,
+				B6BE87ED26557386007876C9 /* PostService.swift */,
+				B6BE87F226558D95007876C9 /* UpVoteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -318,15 +368,10 @@
 			isa = PBXGroup;
 			children = (
 				B6E8D9BD26542BD400796480 /* View+Extensions.swift */,
+				B67D845F2655A81200DB7C37 /* Date+Extensions.swift */,
+				B67D84642655A8FF00DB7C37 /* String+Extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B6E8D978265425CD00796480 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		B6E8D979265425D500796480 /* ViewModels */ = {
@@ -336,6 +381,7 @@
 				B6E8DA14265475DA00796480 /* FeedCellViewModel.swift */,
 				B6E8DA3226548C4C00796480 /* SignUpViewModel.swift */,
 				B6E8DA412654967A00796480 /* LogInViewModel.swift */,
+				B6BE87E8265572E3007876C9 /* PostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -386,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				B6E8DA2D26548BA300796480 /* Validator.swift */,
+				B655B18E265514AD00A59389 /* AccountManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -397,8 +444,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B659136826531CCC0053046C /* Build configuration list for PBXNativeTarget "NewsFeed" */;
 			buildPhases = (
-				B6E8D9DC2654593700796480 /* Apollo CLI */,
 				445D8D3175FC30674901C304 /* [CP] Check Pods Manifest.lock */,
+				B6E8D9DC2654593700796480 /* Apollo CLI */,
 				B659133A26531CCB0053046C /* Sources */,
 				B659133B26531CCB0053046C /* Frameworks */,
 				B659133C26531CCB0053046C /* Resources */,
@@ -510,6 +557,8 @@
 				B6E8D9B52654272900796480 /* SF-Pro-Text-Black.otf in Resources */,
 				B659134E26531CCC0053046C /* LaunchScreen.storyboard in Resources */,
 				B6E8D9B32654272900796480 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
+				B6BE87D726556E47007876C9 /* Post.graphql in Resources */,
+				B6BE87E426556F9B007876C9 /* UpVote.graphql in Resources */,
 				B659134B26531CCC0053046C /* Assets.xcassets in Resources */,
 				B6E8D9AD2654272900796480 /* SF-Pro-Text-Semibold.otf in Resources */,
 				B6E8DA382654946700796480 /* LogIn.graphql in Resources */,
@@ -681,7 +730,11 @@
 				B6E8D9F22654667600796480 /* GraphqlNetwork.swift in Sources */,
 				B6E8DA15265475DA00796480 /* FeedCellViewModel.swift in Sources */,
 				B6E8DA1F265485EF00796480 /* SignUpService.swift in Sources */,
+				B60883F626555686006E17C6 /* PostViewController.swift in Sources */,
+				B6BE87EE26557386007876C9 /* PostService.swift in Sources */,
 				B6E8DA2E26548BA300796480 /* Validator.swift in Sources */,
+				B655B18F265514AD00A59389 /* AccountManager.swift in Sources */,
+				B67D84652655A8FF00DB7C37 /* String+Extension.swift in Sources */,
 				B659134626531CCB0053046C /* SignUpViewController.swift in Sources */,
 				B659134226531CCB0053046C /* AppDelegate.swift in Sources */,
 				B6E8DA3D265494BD00796480 /* LogInService.swift in Sources */,
@@ -689,9 +742,13 @@
 				B6E8D9BE26542BD400796480 /* View+Extensions.swift in Sources */,
 				B6E8D9ED265465BE00796480 /* GraphQLAPI.swift in Sources */,
 				B6E8D9C626543ADD00796480 /* LogInViewController.swift in Sources */,
+				B6BE87F326558D95007876C9 /* UpVoteService.swift in Sources */,
 				B6E8D9CB26543B8000796480 /* FeedViewController.swift in Sources */,
+				B67D84602655A81200DB7C37 /* Date+Extensions.swift in Sources */,
+				B6BE87E9265572E3007876C9 /* PostViewModel.swift in Sources */,
 				B659134426531CCB0053046C /* SceneDelegate.swift in Sources */,
 				B6E8D9FA2654685200796480 /* FeedService.swift in Sources */,
+				B655B1942655179E00A59389 /* BaseViewController.swift in Sources */,
 				B6E8DA0D2654754600796480 /* FeedTableViewCell.swift in Sources */,
 				B6E8DA422654967A00796480 /* LogInViewModel.swift in Sources */,
 			);
@@ -701,7 +758,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B659135926531CCC0053046C /* NewsFeedTests.swift in Sources */,
+				B6BE880A265597E9007876C9 /* PostViewModelTests.swift in Sources */,
+				B6BE880226559749007876C9 /* LogInViewModelTests.swift in Sources */,
+				B6BE87F826559216007876C9 /* FeedViewModelTests.swift in Sources */,
+				B6BE87FD26559606007876C9 /* SignUpViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,10 +28,18 @@ class SignUpViewModel {
 
 extension SignUpViewModel: SignUpServiceDelegate {
     func signUpSuccessful(result: SignUpMutation.Data.Signup) {
-        self.delegate?.signUpSuccessful()
+        if let token = result.token {
+            AccountManager.shared.logIn(with: token)
+            self.delegate?.signUpSuccessful()
+        }
+    }
+    
+    func onFail(error: String) {
+        self.delegate?.onFail(error: error)
     }
 }
 
 protocol SignUpViewModelDelegate: class {
     func signUpSuccessful()
+    func onFail(error: String)
 }
