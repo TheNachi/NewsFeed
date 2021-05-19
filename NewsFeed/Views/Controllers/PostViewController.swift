@@ -56,4 +56,8 @@ extension PostViewController: PostViewModelDelegate {
         }
         self.displayAlert(title: "Success", message: "You've successful created a post", actions: [alertAction], preferredStyle: .alert)
     }
+    
+    func onFail(error: String) {
+        self.displayAlert(title: "Error", message: "There was a problem posting your feed, please try again")
+    }
 }

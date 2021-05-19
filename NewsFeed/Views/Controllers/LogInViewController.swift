@@ -54,4 +54,10 @@ extension LogInViewController: LogInViewModelDelegate {
         let feedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "feedVC") as! FeedViewController
         self.present(feedVC, animated: true, completion: nil)
     }
+    
+    func onFail(error: String?) {
+        spinner.stopAnimating()
+        self.logInButton.isHidden = false
+        self.displayAlert(title: "Error", message: error)
+    }
 }

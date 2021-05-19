@@ -14,3 +14,12 @@ struct Validator {
         return predicate.evaluate(with: email)
     }
 }
+
+
+struct Formatter {
+    public static func create() -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        return formatter
+    }
+}

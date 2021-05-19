@@ -33,8 +33,13 @@ extension SignUpViewModel: SignUpServiceDelegate {
             self.delegate?.signUpSuccessful()
         }
     }
+    
+    func onFail(error: String) {
+        self.delegate?.onFail(error: error)
+    }
 }
 
 protocol SignUpViewModelDelegate: class {
     func signUpSuccessful()
+    func onFail(error: String)
 }

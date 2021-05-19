@@ -15,11 +15,10 @@ struct FeedService {
             switch result {
             case .success(let graphqlResult):
                 guard let feedsList = graphqlResult.data?.feed else {
-                    print("error")
                     return }
                 delegate?.onGetFeeds(response: feedsList)
             case .failure(let error):
-                print(error,"the error")
+                delegate?.onFail(error: error.localizedDescription)
             }
         }
     }
@@ -27,4 +26,5 @@ struct FeedService {
 
 protocol FeedsServiceDelegate: class {
     func onGetFeeds(response: [GetFeedsQuery.Data.Feed])
+    func onFail(error: String)
 }

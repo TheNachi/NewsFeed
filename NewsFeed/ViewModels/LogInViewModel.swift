@@ -33,8 +33,13 @@ extension LogInViewModel: LoginServiceDelegate {
             self.delegate?.logInSuccessful()
         }
     }
+    
+    func onFail(error: String?) {
+        self.delegate?.onFail(error: error)
+    }
 }
 
 protocol LogInViewModelDelegate: class {
     func logInSuccessful()
+    func onFail(error: String?)
 }

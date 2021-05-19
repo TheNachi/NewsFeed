@@ -30,8 +30,13 @@ extension PostViewModel: PostServiceDelegate {
     func postSuccessful() {
         delegate?.postSuccessful()
     }
+    
+    func onFail(error: String) {
+        self.delegate?.onFail(error: error)
+    }
 }
 
 protocol PostViewModelDelegate: class {
     func postSuccessful()
+    func onFail(error: String)
 }

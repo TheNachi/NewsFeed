@@ -29,13 +29,10 @@ class FeedViewController: BaseViewController {
     }
     
     @IBAction func makePostButtonPressed(_ sender: UIButton) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let postVC = storyboard.instantiateViewController(identifier: "postVC") as! PostViewController
-        self.modalPresentationStyle = .overFullScreen
-        postVC.onDoneBlock = { _ in
-            self.viewModel?.getFeed()
-        }
-        self.present(postVC, animated: true, completion: nil)
+//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let postVC = storyboard.instantiateViewController(identifier: "postVC") as! PostViewController
+//        self.modalPresentationStyle = .overFullScreen
+//        self.present(postVC, animated: true, completion: nil)
     }
     
     func bindViewModel() {
@@ -64,9 +61,19 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let feedCell = cell as? FeedTableViewCell {
             feedCell.bindViewModel(with: vModel.getFeedCellViewModel(index: indexPath.row))
+            feedCell.delegate = self
             return feedCell
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let vModel = viewModel else { return }
+        if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
+            if indexPath == lastVisibleIndexPath && indexPath.row == vModel.getFeedListCount() - 1 {
+                vModel.getFeed()
+            }
+        }
     }
 }
 
@@ -76,5 +83,19 @@ extension FeedViewController: FeedViewModelDelegate {
             self.spinner.stopAnimating()
             self.feedTableView.reloadData()
         }
+    }
+    
+    func onFail(error: String) {
+        let alertAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.viewModel?.getFeed()
+        }
+        self.displayAlert(title: "Error", message: "There was a problem loading data from the internet, ensure you're connected to the internet", actions: [alertAction], preferredStyle: .alert)
+    }
+}
+
+
+extension FeedViewController: FeedCellDelegate {
+    func callDisplayAlert() {
+        self.displayAlert(title: "Error", message: "You've already upvoted this feed")
     }
 }

@@ -15,12 +15,12 @@ struct SignUpService {
             switch result {
             case .success(let graphqlResult):
                 guard let userDetails = graphqlResult.data?.signup else {
-                    print("error")
+                    delegate?.onFail(error: "error")
                     return
                 }
                 delegate?.signUpSuccessful(result: userDetails)
             case .failure(let error):
-                print(error, "the error")
+                delegate?.onFail(error: error.localizedDescription)
             }
         }
     }
@@ -28,4 +28,5 @@ struct SignUpService {
 
 protocol SignUpServiceDelegate: class {
     func signUpSuccessful(result: SignUpMutation.Data.Signup)
+    func onFail(error: String)
 }

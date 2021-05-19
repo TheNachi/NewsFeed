@@ -205,7 +205,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIX-LG-Aqs">
-                                <rect key="frame" x="334" y="62" width="60" height="32"/>
+                                <rect key="frame" x="336" y="62.5" width="58" height="31"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.36470588235294116" green="0.69019607843137254" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
@@ -265,7 +265,7 @@
                                 <rect key="frame" x="16" y="202" width="382" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRW-SV-xCY">
-                                        <rect key="frame" x="16" y="15" width="350" height="20"/>
+                                        <rect key="frame" x="16" y="15.5" width="350" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
@@ -342,7 +342,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RM-vY-D4C">
-                                <rect key="frame" x="333" y="63" width="61" height="32"/>
+                                <rect key="frame" x="336" y="63.5" width="58" height="31"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="0.36470588235294116" green="0.69019607843137254" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
@@ -364,7 +364,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzv-hi-96D">
-                                                    <rect key="frame" x="16" y="35" width="30" height="24"/>
+                                                    <rect key="frame" x="16" y="35.5" width="30" height="23.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="X95-uq-8wG"/>
                                                     </constraints>
@@ -448,6 +448,7 @@
                                 <state key="normal" image="AddFeedButton"/>
                                 <connections>
                                     <action selector="makePostButtonPressed:" destination="vEN-Xo-5Vk" eventType="touchUpInside" id="4ZS-Ii-ThO"/>
+                                    <segue destination="8Fi-mv-ovM" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="Qsi-lS-DSj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -482,7 +483,7 @@
         <!--Post View Controller-->
         <scene sceneID="5Hd-oJ-i7N">
             <objects>
-                <viewController storyboardIdentifier="postVC" modalPresentationStyle="pageSheet" id="8Fi-mv-ovM" customClass="PostViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="postVC" modalPresentationStyle="overFullScreen" id="8Fi-mv-ovM" customClass="PostViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="YSt-lA-yrc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -491,24 +492,24 @@
                                 <rect key="frame" x="0.0" y="175" width="423" height="721"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-ua-9BD">
-                                        <rect key="frame" x="25" y="172" width="373" height="21"/>
+                                        <rect key="frame" x="25" y="172.5" width="373" height="21"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6n-U7-1Ln">
-                                        <rect key="frame" x="25" y="203" width="373" height="1"/>
+                                        <rect key="frame" x="25" y="203.5" width="373" height="1"/>
                                         <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="XZd-Fa-5Xo"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t7T-GO-4df">
-                                        <rect key="frame" x="25" y="233" width="373" height="21"/>
+                                        <rect key="frame" x="25" y="233.5" width="373" height="21"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz6-nd-Rmb">
-                                        <rect key="frame" x="25" y="264" width="373" height="1"/>
+                                        <rect key="frame" x="25" y="264.5" width="373" height="1"/>
                                         <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="gew-1h-aI5"/>
@@ -523,13 +524,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got something to post?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZx-2u-ork">
-                                        <rect key="frame" x="41.5" y="64" width="340" height="36"/>
+                                        <rect key="frame" x="41.5" y="64" width="340" height="36.5"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNr-B6-KaD">
-                                        <rect key="frame" x="20" y="286" width="383" height="51"/>
+                                        <rect key="frame" x="20" y="286.5" width="383" height="51"/>
                                         <color key="backgroundColor" red="0.36470588240000001" green="0.69019607839999997" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="3Ro-5i-1Wn"/>
@@ -549,7 +550,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6a-8X-1xE">
-                                        <rect key="frame" x="184.5" y="353" width="54" height="32"/>
+                                        <rect key="frame" x="184.5" y="353.5" width="54" height="32"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="0.36470588240000001" green="0.69019607839999997" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -586,7 +587,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lSZ-lq-Utb"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="0.36521578150869205" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gg3-r4-7U3" firstAttribute="bottom" secondItem="lSZ-lq-Utb" secondAttribute="bottom" constant="34" id="2FR-w5-Cam"/>
                             <constraint firstItem="gg3-r4-7U3" firstAttribute="trailing" secondItem="lSZ-lq-Utb" secondAttribute="trailing" constant="9" id="BSm-QY-Lm1"/>

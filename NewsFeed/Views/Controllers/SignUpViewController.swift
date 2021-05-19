@@ -58,4 +58,10 @@ extension SignUpViewController: SignUpViewModelDelegate {
         let feedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "feedVC") as! FeedViewController
         self.present(feedVC, animated: true, completion: nil)
     }
+    
+    func onFail(error: String) {
+        spinner.stopAnimating()
+        self.signUpButton.isHidden = false
+        self.displayAlert(title: "Error", message: "There's a problem creating this user, please ensure the email hasn't been used before, or you can try Log in")
+    }
 }

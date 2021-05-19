@@ -11,6 +11,7 @@ class FeedViewModel {
     private var feedService: FeedService?
     private var feedList: [GetFeedsQuery.Data.Feed] = []
     weak var delegate: FeedViewModelDelegate?
+    private var trackCount = 0
     
     init(with feedService: FeedService?) {
         self.feedService = feedService
@@ -42,11 +43,19 @@ class FeedViewModel {
 
 extension FeedViewModel: FeedsServiceDelegate {
     func onGetFeeds(response: [GetFeedsQuery.Data.Feed]) {
-        self.updateFeedList(with: response)
-        self.delegate?.onFeedLoaded()
+        if trackCount != response.count {
+            self.updateFeedList(with: response)
+            self.delegate?.onFeedLoaded()
+            self.trackCount = response.count
+        }
+    }
+    
+    func onFail(error: String) {
+        self.delegate?.onFail(error: error)
     }
 }
 
 protocol FeedViewModelDelegate: class {
     func onFeedLoaded()
+    func onFail(error: String)
 }

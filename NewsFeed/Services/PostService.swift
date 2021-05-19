@@ -17,7 +17,7 @@ struct PostService {
             case .success( _):
                 delegate?.postSuccessful()
             case.failure(let error):
-                print(error, "the error")
+                delegate?.onFail(error: error.localizedDescription)
             }
         }
     }
@@ -25,4 +25,5 @@ struct PostService {
 
 protocol PostServiceDelegate: class {
     func postSuccessful()
+    func onFail(error: String)
 }
