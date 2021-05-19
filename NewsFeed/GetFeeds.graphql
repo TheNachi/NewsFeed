@@ -1,0 +1,14 @@
+query GetFeeds {
+  feed {
+    id
+    description
+    url
+    votes
+    postedBy {
+      id
+      name
+      email
+    }
+    createdAt
+  }
+}

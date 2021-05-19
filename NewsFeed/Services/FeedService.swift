@@ -1,0 +1,30 @@
+//
+//  FeedService.swift
+//  NewsFeed
+//
+//  Created by Munachimso Ugorji on 18/05/2021.
+//
+
+import Foundation
+
+struct FeedService {
+    weak var delegate: FeedsServiceDelegate?
+    
+    func getFeeds() {
+        GraphqlNetwork.shared.apollo.fetch(query: GetFeedsQuery()) { result in
+            switch result {
+            case .success(let graphqlResult):
+                guard let feedsList = graphqlResult.data?.feed else {
+                    print("error")
+                    return }
+                delegate?.onGetFeeds(response: feedsList)
+            case .failure(let error):
+                print(error,"the error")
+            }
+        }
+    }
+}
+
+protocol FeedsServiceDelegate: class {
+    func onGetFeeds(response: [GetFeedsQuery.Data.Feed])
+}
