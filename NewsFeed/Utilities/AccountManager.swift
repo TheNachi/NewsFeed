@@ -13,7 +13,7 @@ struct AccountManager {
     
     func logIn(with token: String) {
         userDefaults.set(token, forKey: "USER_TOKEN")
-        userDefaults.setValue(true, forKey: "IS_LOGGEDIN")
+        userDefaults.set(true, forKey: "IS_LOGGEDIN")
         userDefaults.synchronize()
     }
     
@@ -23,5 +23,17 @@ struct AccountManager {
     
     func logOut() {
         userDefaults.removeObject(forKey: "IS_LOGGEDIN")
+        userDefaults.removeObject(forKey: "USER_TOKEN")
+    }
+    
+    func upVotedFeeds(id: String) -> Bool{
+        let upVotedFeeds : [String] = userDefaults.object(forKey: "UPVOTE_FEEDS") as? [String] ?? []
+        return upVotedFeeds.contains(id)
+    }
+    
+    func upVoteFeed(id: String) {
+        var upVotedFeeds : [String] = userDefaults.object(forKey: "UPVOTE_FEEDS") as? [String] ?? []
+        upVotedFeeds.append(id)
+        userDefaults.set(upVotedFeeds, forKey: "UPVOTE_FEEDS")
     }
 }

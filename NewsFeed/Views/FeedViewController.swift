@@ -7,11 +7,14 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: BaseViewController {
     @IBOutlet weak var feedTableView: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var viewModel: FeedViewModel?
     
     override func viewDidLoad() {
+        self.spinner.transform = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
+        self.spinner.startAnimating()
         super.viewDidLoad()
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
@@ -24,6 +27,12 @@ class FeedViewController: UIViewController {
         viewModel = FeedViewModel(with: feedService)
         viewModel?.delegate = self
         viewModel?.getFeed()
+    }
+    
+    @IBAction func logOutButtonPressed(_ sender: UIButton) {
+        AccountManager.shared.logOut()
+        let logInVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "logInVC") as! LogInViewController
+        self.present(logInVC, animated: true, completion: nil)
     }
 }
 
@@ -41,7 +50,6 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             feedCell.bindViewModel(with: vModel.getFeedCellViewModel(index: indexPath.row))
             return feedCell
         }
-        
         return cell
     }
 }
@@ -49,6 +57,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
 extension FeedViewController: FeedViewModelDelegate {
     func onFeedLoaded() {
         DispatchQueue.main.async {
+            self.spinner.stopAnimating()
             self.feedTableView.reloadData()
         }
     }
