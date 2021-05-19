@@ -22,7 +22,7 @@ class FeedViewModel {
         feedService.getFeeds()
     }
     
-    private func updateFeedList(with response: [GetFeedsQuery.Data.Feed]) {
+    public func updateFeedList(with response: [GetFeedsQuery.Data.Feed]) {
         self.feedList = response
     }
     

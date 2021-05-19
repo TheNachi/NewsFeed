@@ -19,13 +19,16 @@
 		B659134926531CCB0053046C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B659134726531CCB0053046C /* Main.storyboard */; };
 		B659134B26531CCC0053046C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B659134A26531CCC0053046C /* Assets.xcassets */; };
 		B659134E26531CCC0053046C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B659134C26531CCC0053046C /* LaunchScreen.storyboard */; };
-		B659135926531CCC0053046C /* NewsFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659135826531CCC0053046C /* NewsFeedTests.swift */; };
 		B659136426531CCC0053046C /* NewsFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659136326531CCC0053046C /* NewsFeedUITests.swift */; };
 		B6BE87D726556E47007876C9 /* Post.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B6BE87D626556E47007876C9 /* Post.graphql */; };
 		B6BE87E426556F9B007876C9 /* UpVote.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B6BE87E326556F9B007876C9 /* UpVote.graphql */; };
 		B6BE87E9265572E3007876C9 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87E8265572E3007876C9 /* PostViewModel.swift */; };
 		B6BE87EE26557386007876C9 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87ED26557386007876C9 /* PostService.swift */; };
 		B6BE87F326558D95007876C9 /* UpVoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87F226558D95007876C9 /* UpVoteService.swift */; };
+		B6BE87F826559216007876C9 /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87F726559216007876C9 /* FeedViewModelTests.swift */; };
+		B6BE87FD26559606007876C9 /* SignUpViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87FC26559606007876C9 /* SignUpViewModelTests.swift */; };
+		B6BE880226559749007876C9 /* LogInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE880126559749007876C9 /* LogInViewModelTests.swift */; };
+		B6BE880A265597E9007876C9 /* PostViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE8809265597E9007876C9 /* PostViewModelTests.swift */; };
 		B6E8D98A265426FA00796480 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D981265426FA00796480 /* Inter-Medium.ttf */; };
 		B6E8D98B265426FA00796480 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D982265426FA00796480 /* Inter-ExtraBold.ttf */; };
 		B6E8D98C265426FA00796480 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D983265426FA00796480 /* Inter-Regular.ttf */; };
@@ -109,7 +112,6 @@
 		B659134D26531CCC0053046C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B659134F26531CCC0053046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B659135426531CCC0053046C /* NewsFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B659135826531CCC0053046C /* NewsFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTests.swift; sourceTree = "<group>"; };
 		B659135A26531CCC0053046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B659135F26531CCC0053046C /* NewsFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B659136326531CCC0053046C /* NewsFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedUITests.swift; sourceTree = "<group>"; };
@@ -119,6 +121,10 @@
 		B6BE87E8265572E3007876C9 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		B6BE87ED26557386007876C9 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		B6BE87F226558D95007876C9 /* UpVoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpVoteService.swift; sourceTree = "<group>"; };
+		B6BE87F726559216007876C9 /* FeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelTests.swift; sourceTree = "<group>"; };
+		B6BE87FC26559606007876C9 /* SignUpViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelTests.swift; sourceTree = "<group>"; };
+		B6BE880126559749007876C9 /* LogInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModelTests.swift; sourceTree = "<group>"; };
+		B6BE8809265597E9007876C9 /* PostViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTests.swift; sourceTree = "<group>"; };
 		B6E8D981265426FA00796480 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		B6E8D982265426FA00796480 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B6E8D983265426FA00796480 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
@@ -256,7 +262,6 @@
 				B6E8DA2926548B4800796480 /* Utilities */,
 				B6E8D9802654263300796480 /* Fonts */,
 				B6E8D979265425D500796480 /* ViewModels */,
-				B6E8D978265425CD00796480 /* Constants */,
 				B6E8D977265425C500796480 /* Extensions */,
 				B6E8D976265425BE00796480 /* Models */,
 				B6E8D975265425B500796480 /* Services */,
@@ -277,8 +282,11 @@
 		B659135726531CCC0053046C /* NewsFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				B659135826531CCC0053046C /* NewsFeedTests.swift */,
 				B659135A26531CCC0053046C /* Info.plist */,
+				B6BE87F726559216007876C9 /* FeedViewModelTests.swift */,
+				B6BE87FC26559606007876C9 /* SignUpViewModelTests.swift */,
+				B6BE880126559749007876C9 /* LogInViewModelTests.swift */,
+				B6BE8809265597E9007876C9 /* PostViewModelTests.swift */,
 			);
 			path = NewsFeedTests;
 			sourceTree = "<group>";
@@ -290,6 +298,17 @@
 				B659136526531CCC0053046C /* Info.plist */,
 			);
 			path = NewsFeedUITests;
+			sourceTree = "<group>";
+		};
+		B6BE880E2655994A007876C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B659134526531CCB0053046C /* SignUpViewController.swift */,
+				B6E8D9C526543ADD00796480 /* LogInViewController.swift */,
+				B6E8D9CA26543B8000796480 /* FeedViewController.swift */,
+				B60883F526555686006E17C6 /* PostViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B6E8D9722654259D00796480 /* App */ = {
@@ -305,11 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				B6E8DA0B2654753000796480 /* Cells */,
-				B659134526531CCB0053046C /* SignUpViewController.swift */,
+				B6BE880E2655994A007876C9 /* Controllers */,
 				B659134726531CCB0053046C /* Main.storyboard */,
-				B6E8D9C526543ADD00796480 /* LogInViewController.swift */,
-				B6E8D9CA26543B8000796480 /* FeedViewController.swift */,
-				B60883F526555686006E17C6 /* PostViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,13 +366,6 @@
 				B6E8D9BD26542BD400796480 /* View+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B6E8D978265425CD00796480 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		B6E8D979265425D500796480 /* ViewModels */ = {
@@ -741,7 +750,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B659135926531CCC0053046C /* NewsFeedTests.swift in Sources */,
+				B6BE880A265597E9007876C9 /* PostViewModelTests.swift in Sources */,
+				B6BE880226559749007876C9 /* LogInViewModelTests.swift in Sources */,
+				B6BE87F826559216007876C9 /* FeedViewModelTests.swift in Sources */,
+				B6BE87FD26559606007876C9 /* SignUpViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

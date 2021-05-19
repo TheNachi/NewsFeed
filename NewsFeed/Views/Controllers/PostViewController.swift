@@ -12,7 +12,6 @@ class PostViewController: BaseViewController {
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     private var viewModel: PostViewModel?
-    var onDoneBlock: ((Bool) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +52,7 @@ class PostViewController: BaseViewController {
 extension PostViewController: PostViewModelDelegate {
     func postSuccessful() {
         let alertAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.dismiss(animated: true) {
-                self.onDoneBlock?(true)
-            }
+            self.dismiss(animated: true, completion: nil)
         }
         self.displayAlert(title: "Success", message: "You've successful created a post", actions: [alertAction], preferredStyle: .alert)
     }
