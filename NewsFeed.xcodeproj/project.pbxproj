@@ -10,6 +10,8 @@
 		36777789E71E82F45FC77741 /* Pods_NewsFeed_NewsFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1D8F25C558C6F6A81EF443 /* Pods_NewsFeed_NewsFeedUITests.framework */; };
 		5407CF28D2C8FD5CC3DB4274 /* Pods_NewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D337B01593C8166D3B5444 /* Pods_NewsFeed.framework */; };
 		553980DBC64FFBD919A688FA /* Pods_NewsFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B4B154C8D53FBE979FF8C5 /* Pods_NewsFeedTests.framework */; };
+		B655B18F265514AD00A59389 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B655B18E265514AD00A59389 /* AccountManager.swift */; };
+		B655B1942655179E00A59389 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B655B1932655179E00A59389 /* BaseViewController.swift */; };
 		B659134226531CCB0053046C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659134126531CCB0053046C /* AppDelegate.swift */; };
 		B659134426531CCB0053046C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659134326531CCB0053046C /* SceneDelegate.swift */; };
 		B659134626531CCB0053046C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659134526531CCB0053046C /* SignUpViewController.swift */; };
@@ -89,6 +91,8 @@
 		8E1D8F25C558C6F6A81EF443 /* Pods_NewsFeed_NewsFeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsFeed_NewsFeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC8EB6673494F1B34E242D6 /* Pods-NewsFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeedTests.release.xcconfig"; path = "Target Support Files/Pods-NewsFeedTests/Pods-NewsFeedTests.release.xcconfig"; sourceTree = "<group>"; };
 		B3376CEA1D5B2D9AC67A64EF /* Pods-NewsFeed-NewsFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeed-NewsFeedUITests.debug.xcconfig"; path = "Target Support Files/Pods-NewsFeed-NewsFeedUITests/Pods-NewsFeed-NewsFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B655B18E265514AD00A59389 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		B655B1932655179E00A59389 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B659133E26531CCB0053046C /* NewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B659134126531CCB0053046C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B659134326531CCB0053046C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +207,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B655B1982655188400A59389 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B655B1932655179E00A59389 /* BaseViewController.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
 		B659133526531CCA0053046C = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 		B659134026531CCB0053046C /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				B655B1982655188400A59389 /* BaseClasses */,
 				B6E8DA2926548B4800796480 /* Utilities */,
 				B6E8D9802654263300796480 /* Fonts */,
 				B6E8D979265425D500796480 /* ViewModels */,
@@ -386,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				B6E8DA2D26548BA300796480 /* Validator.swift */,
+				B655B18E265514AD00A59389 /* AccountManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -682,6 +696,7 @@
 				B6E8DA15265475DA00796480 /* FeedCellViewModel.swift in Sources */,
 				B6E8DA1F265485EF00796480 /* SignUpService.swift in Sources */,
 				B6E8DA2E26548BA300796480 /* Validator.swift in Sources */,
+				B655B18F265514AD00A59389 /* AccountManager.swift in Sources */,
 				B659134626531CCB0053046C /* SignUpViewController.swift in Sources */,
 				B659134226531CCB0053046C /* AppDelegate.swift in Sources */,
 				B6E8DA3D265494BD00796480 /* LogInService.swift in Sources */,
@@ -692,6 +707,7 @@
 				B6E8D9CB26543B8000796480 /* FeedViewController.swift in Sources */,
 				B659134426531CCB0053046C /* SceneDelegate.swift in Sources */,
 				B6E8D9FA2654685200796480 /* FeedService.swift in Sources */,
+				B655B1942655179E00A59389 /* BaseViewController.swift in Sources */,
 				B6E8DA0D2654754600796480 /* FeedTableViewCell.swift in Sources */,
 				B6E8DA422654967A00796480 /* LogInViewModel.swift in Sources */,
 			);

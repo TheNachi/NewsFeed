@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -36,10 +36,10 @@ class SignUpViewController: UIViewController {
             if Validator.emailIsValid(email: email) {
                 vModel.signUp(name: name, email: email, password: password)
             } else {
-                print("email not valid")
+                self.displayAlert(title: "Error", message: "Ensure you entered a valid email")
             }
         } else {
-            print("ensure no field is vacant")
+            self.displayAlert(title: "Error", message: "All fields are required, please leave none empty")
         }
     }
 }

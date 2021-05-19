@@ -7,6 +7,7 @@ target 'NewsFeed' do
 
   # Pods for NewsFeed
   pod 'Apollo'
+  pod 'IQKeyboardManagerSwift'
 
   target 'NewsFeedTests' do
     inherit! :search_paths
