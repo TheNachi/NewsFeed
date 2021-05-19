@@ -1,4 +1,4 @@
-# Browser
+# NewsFeed
 
 This repo holds the source code for a simple NewsFeed App.
 
