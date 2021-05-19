@@ -21,6 +21,11 @@
 		B659134E26531CCC0053046C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B659134C26531CCC0053046C /* LaunchScreen.storyboard */; };
 		B659135926531CCC0053046C /* NewsFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659135826531CCC0053046C /* NewsFeedTests.swift */; };
 		B659136426531CCC0053046C /* NewsFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B659136326531CCC0053046C /* NewsFeedUITests.swift */; };
+		B6BE87D726556E47007876C9 /* Post.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B6BE87D626556E47007876C9 /* Post.graphql */; };
+		B6BE87E426556F9B007876C9 /* UpVote.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B6BE87E326556F9B007876C9 /* UpVote.graphql */; };
+		B6BE87E9265572E3007876C9 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87E8265572E3007876C9 /* PostViewModel.swift */; };
+		B6BE87EE26557386007876C9 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87ED26557386007876C9 /* PostService.swift */; };
+		B6BE87F326558D95007876C9 /* UpVoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE87F226558D95007876C9 /* UpVoteService.swift */; };
 		B6E8D98A265426FA00796480 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D981265426FA00796480 /* Inter-Medium.ttf */; };
 		B6E8D98B265426FA00796480 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D982265426FA00796480 /* Inter-ExtraBold.ttf */; };
 		B6E8D98C265426FA00796480 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6E8D983265426FA00796480 /* Inter-Regular.ttf */; };
@@ -109,6 +114,11 @@
 		B659135F26531CCC0053046C /* NewsFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B659136326531CCC0053046C /* NewsFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedUITests.swift; sourceTree = "<group>"; };
 		B659136526531CCC0053046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6BE87D626556E47007876C9 /* Post.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Post.graphql; sourceTree = "<group>"; };
+		B6BE87E326556F9B007876C9 /* UpVote.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpVote.graphql; sourceTree = "<group>"; };
+		B6BE87E8265572E3007876C9 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		B6BE87ED26557386007876C9 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		B6BE87F226558D95007876C9 /* UpVoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpVoteService.swift; sourceTree = "<group>"; };
 		B6E8D981265426FA00796480 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		B6E8D982265426FA00796480 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B6E8D983265426FA00796480 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
@@ -258,6 +268,8 @@
 				B6E8D9E026545C0100796480 /* schema.json */,
 				B6E8DA192654851300796480 /* SignUp.graphql */,
 				B6E8DA372654946600796480 /* LogIn.graphql */,
+				B6BE87D626556E47007876C9 /* Post.graphql */,
+				B6BE87E326556F9B007876C9 /* UpVote.graphql */,
 			);
 			path = NewsFeed;
 			sourceTree = "<group>";
@@ -319,6 +331,8 @@
 				B6E8D9F92654685200796480 /* FeedService.swift */,
 				B6E8DA1E265485EF00796480 /* SignUpService.swift */,
 				B6E8DA3C265494BD00796480 /* LogInService.swift */,
+				B6BE87ED26557386007876C9 /* PostService.swift */,
+				B6BE87F226558D95007876C9 /* UpVoteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -352,6 +366,7 @@
 				B6E8DA14265475DA00796480 /* FeedCellViewModel.swift */,
 				B6E8DA3226548C4C00796480 /* SignUpViewModel.swift */,
 				B6E8DA412654967A00796480 /* LogInViewModel.swift */,
+				B6BE87E8265572E3007876C9 /* PostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -527,6 +542,8 @@
 				B6E8D9B52654272900796480 /* SF-Pro-Text-Black.otf in Resources */,
 				B659134E26531CCC0053046C /* LaunchScreen.storyboard in Resources */,
 				B6E8D9B32654272900796480 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
+				B6BE87D726556E47007876C9 /* Post.graphql in Resources */,
+				B6BE87E426556F9B007876C9 /* UpVote.graphql in Resources */,
 				B659134B26531CCC0053046C /* Assets.xcassets in Resources */,
 				B6E8D9AD2654272900796480 /* SF-Pro-Text-Semibold.otf in Resources */,
 				B6E8DA382654946700796480 /* LogIn.graphql in Resources */,
@@ -699,6 +716,7 @@
 				B6E8DA15265475DA00796480 /* FeedCellViewModel.swift in Sources */,
 				B6E8DA1F265485EF00796480 /* SignUpService.swift in Sources */,
 				B60883F626555686006E17C6 /* PostViewController.swift in Sources */,
+				B6BE87EE26557386007876C9 /* PostService.swift in Sources */,
 				B6E8DA2E26548BA300796480 /* Validator.swift in Sources */,
 				B655B18F265514AD00A59389 /* AccountManager.swift in Sources */,
 				B659134626531CCB0053046C /* SignUpViewController.swift in Sources */,
@@ -708,7 +726,9 @@
 				B6E8D9BE26542BD400796480 /* View+Extensions.swift in Sources */,
 				B6E8D9ED265465BE00796480 /* GraphQLAPI.swift in Sources */,
 				B6E8D9C626543ADD00796480 /* LogInViewController.swift in Sources */,
+				B6BE87F326558D95007876C9 /* UpVoteService.swift in Sources */,
 				B6E8D9CB26543B8000796480 /* FeedViewController.swift in Sources */,
+				B6BE87E9265572E3007876C9 /* PostViewModel.swift in Sources */,
 				B659134426531CCB0053046C /* SceneDelegate.swift in Sources */,
 				B6E8D9FA2654685200796480 /* FeedService.swift in Sources */,
 				B655B1942655179E00A59389 /* BaseViewController.swift in Sources */,

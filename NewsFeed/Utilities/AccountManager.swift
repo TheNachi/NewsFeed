@@ -36,4 +36,8 @@ struct AccountManager {
         upVotedFeeds.append(id)
         userDefaults.set(upVotedFeeds, forKey: "UPVOTE_FEEDS")
     }
+    
+    func getToken() -> String? {
+        return userDefaults.object(forKey: "USER_TOKEN") as? String
+    }
 }

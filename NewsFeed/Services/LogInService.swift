@@ -11,7 +11,7 @@ struct LogInService {
     weak var delegate: LoginServiceDelegate?
     
     func logIn(email: String, password: String) {
-        GraphqlNetwork.shared.apollo.perform(mutation: LogInMutation(email: email, password: password)) { result in
+        GraphqlNetwork.shared.apolloWithoutHeader.perform(mutation: LogInMutation(email: email, password: password)) { result in
             switch result {
             case .success(let graphqlResult):
                 guard let userDetails = graphqlResult.data?.login else {

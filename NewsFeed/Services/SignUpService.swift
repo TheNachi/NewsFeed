@@ -11,7 +11,7 @@ struct SignUpService {
     weak var delegate: SignUpServiceDelegate?
     
     func signUp(name: String, email: String, password: String) {
-        GraphqlNetwork.shared.apollo.perform(mutation: SignUpMutation(name: name, email: email, password: password)) { result in
+        GraphqlNetwork.shared.apolloWithoutHeader.perform(mutation: SignUpMutation(name: name, email: email, password: password)) { result in
             switch result {
             case .success(let graphqlResult):
                 guard let userDetails = graphqlResult.data?.signup else {

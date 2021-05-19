@@ -1,0 +1,8 @@
+mutation Post($url: String!, $description: String!) {
+  post(url: $url, description: $description) {
+    id
+    description
+    url
+    votes
+  }
+}

@@ -23,7 +23,7 @@ class FeedViewModel {
     }
     
     private func updateFeedList(with response: [GetFeedsQuery.Data.Feed]) {
-        self.feedList.append(contentsOf: response)
+        self.feedList = response
     }
     
     public func getFeedListCount() -> Int {

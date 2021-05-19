@@ -12,14 +12,30 @@ class FeedViewController: BaseViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var viewModel: FeedViewModel?
     
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.spinner.transform = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         self.spinner.startAnimating()
-        super.viewDidLoad()
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
-        self.bindViewModel()
         self.feedTableView.tableFooterView = UIView()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.bindViewModel()
+    }
+    
+    @IBAction func makePostButtonPressed(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let postVC = storyboard.instantiateViewController(identifier: "postVC") as! PostViewController
+        self.modalPresentationStyle = .overFullScreen
+        postVC.onDoneBlock = { _ in
+            self.viewModel?.getFeed()
+        }
+        self.present(postVC, animated: true, completion: nil)
     }
     
     func bindViewModel() {

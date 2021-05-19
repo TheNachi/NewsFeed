@@ -11,7 +11,7 @@ struct FeedService {
     weak var delegate: FeedsServiceDelegate?
     
     func getFeeds() {
-        GraphqlNetwork.shared.apollo.fetch(query: GetFeedsQuery()) { result in
+        GraphqlNetwork.shared.apolloWithoutHeader.fetch(query: GetFeedsQuery()) { result in
             switch result {
             case .success(let graphqlResult):
                 guard let feedsList = graphqlResult.data?.feed else {
